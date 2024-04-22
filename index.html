@@ -1,0 +1,65 @@
+<!-- Lucas Birkert - TickTackToe -->
+
+<!--  _______ _      _ _______         _ _______          -->
+<!-- |__   __(_)    | |__   __|       | |__   __|         -->
+<!--    | |   _  ___| | _| | __ _  ___| | _| | ___   ___  -->
+<!--    | |  | |/ __| |/ / |/ _` |/ __| |/ / |/ _ \ / _ \ -->
+<!--    | |  | | (__|   <| | (_| | (__|   <| | (_) |  __/ -->
+<!--    |_|  |_|\___|_|\_\_|\__,_|\___|_|\_\_|\___/ \___| -->
+
+<!-- https://github.com/lbirkert/ticktacktoe/tree/main/LICENSE -->
+
+<!-- (c) Copyright 2024 Lucas Birkert, all rights reserved -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <title>Lucas Birkert - TickTackToe</title>
+
+</head>
+
+<body>
+  <main id="splash">
+    <h1>Game Over</h1>
+
+    <p class="win">Player <span id="winner"></span> has won!</p>
+    <p class="tie">It's a tie :(</p>
+
+    <button onclick="reset()">Reset</button>
+  </main>
+  <main id="main">
+    <h1>TickTackToe</h1>
+    <p>Click on a square to play!</p>
+
+    <div class="col" id="game">
+      <div class="row">
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+      <div class="row">
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+      <div class="row">
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+    </div>
+
+    <button onclick="reset()">Reset</button>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+/* Lucas Birkert - TickTackToe */
+
+/*  _______ _      _ _______         _ _______          */
+/* |__   __(_)    | |__   __|       | |__   __|         */
+/*    | |   _  ___| | _| | __ _  ___| | _| | ___   ___  */
+/*    | |  | |/ __| |/ / |/ _` |/ __| |/ / |/ _ \ / _ \ */
+/*    | |  | | (__|   <| | (_| | (__|   <| | (_) |  __/ */
+/*    |_|  |_|\___|_|\_\_|\__,_|\___|_|\_\_|\___/ \___| */
+
+/* https://github.com/lbirkert/ticktacktoe/tree/main/LICENSE */
+
+/* (c) Copyright 2024 Lucas Birkert, all rights reserved */
+
+
+/* BASIC STYLING */
+
+* {
+  font-family: "VT323", monospace;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+
+button {
+  font-size: 20px;
+  width: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 3px solid black;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* GAME GRID STYLES */
+
+#game {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+#game .row {
+  display: flex;
+  width: 100%;
+}
+
+#game button {
+  all: unset;
+  flex: 1;
+  aspect-ratio: 1;
+  cursor: pointer;
+  border: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 60px;
+}
+
+#game button:hover {
+  background-color: #eee;
+}
+
+#game button:disabled {
+  cursor: unset;
+}
+
+#game button:disabled:hover {
+  background-color: transparent;
+}
+
+#game .row button:nth-child(1) {
+  border-left: none;
+}
+
+#game .row button:nth-child(3) {
+  border-right: none;
+}
+
+#game .row:nth-child(1) button {
+  border-top: none;
+}
+
+#game .row:nth-child(3) button {
+  border-bottom: none;
+}
+
+#game button.x::after {
+  content: "X";
+  color: red;
+}
+
+#game button.o::after {
+  content: "O";
+  color: blue;
+}
+
+/* SPLASH SCREEN STYLES */
+
+#splash,
+.gameover #main {
+  display: none;
+}
+
+#main,
+.gameover #splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+}
+
+#splash .win,
+#splash .tie {
+  display: none;
+}
+
+#splash.win .win {
+  display: block;
+}
+
+#splash.tie .tie {
+  display: block;
+}
+
+#winner.x::after {
+  content: "X";
+  color: red;
+}
+
+#winner.o::after {
+  content: "O";
+  color: blue;
+}
+
