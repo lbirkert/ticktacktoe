@@ -1,3 +1,5 @@
+# Workflow to upload to github pages
+
 name: Publish to github pages
 
 on:
