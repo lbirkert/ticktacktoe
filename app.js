@@ -28,16 +28,16 @@ function onBtnClick(id) {
     player *= -1;
 
     const win = checkWin();
-    if (win == 0) {
-      if (!checkTie()) return;
+    if (win != 0) {
+      winner.className = win == 1 ? "x" : "o";
       document.body.className = "gameover";
-      splash.className = "tie";
-      return;
+      splash.className = "win";
     }
 
-    winner.className = win == 1 ? "x" : "o";
-    document.body.className = "gameover";
-    splash.className = "win";
+    if (checkTie()) {
+      document.body.className = "gameover";
+      splash.className = "tie";
+    }
   };
 }
 
