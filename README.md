@@ -1,6 +1,6 @@
-# <a href="https://lbirkert.com/ticktacktoe">TicTacToe</a>
+# <a href="https://lbirkert.com/tictactoe">TicTacToe</a>
 
-[![Publish to github pages](https://github.com/lbirkert/ticktacktoe/actions/workflows/publish.yml/badge.svg)](https://github.com/lbirkert/ticktacktoe/actions/workflows/publish.yml)
+[![Publish to github pages](https://github.com/lbirkert/tictactoe/actions/workflows/publish.yml/badge.svg)](https://github.com/lbirkert/tictactoe/actions/workflows/publish.yml)
 
 <br>
 
